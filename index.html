@@ -1,6 +1,6 @@
 <!--
 	A simple gooey animation made with CSS and vanilla JS.
-	GitHub repository: https://github.com/matteoo34/ABCD
+	GitHub repository: https://github.com/matteoo34/Gooey
 	Made by Mattéo Legagneux
 	Copyright (C) 2021
 -->
@@ -12,6 +12,15 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="A simple gooey animation made with CSS and vanilla JS.">
+		<meta name="keywords" content="gooey, effect, animation, html, css, javascript, js, vanilla, mattéo, legagneux">
+		<meta name="author" content="Mattéo Legagneux">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="https://matteoo34.github.io/Gooey">
+		<meta property="og:site_name" content="matteoo34's GitHub">
+		<meta property="og:title" content="Gooey Effect with vanilla JavaScript">
+		<meta property="og:description" content="A simple gooey animation made with CSS and vanilla JS.">
 		<style>
 			body {
 				margin: 0;
@@ -19,12 +28,9 @@
 			}
 
 			.gooey {
-				width: 100%;
 				height: 100vh;
-				top: 0;
-				left: 0;
-				position: absolute;
 				background-color: #000;
+				-webkit-filter: contrast(100);
 				filter: contrast(100)
 			}
 
@@ -32,17 +38,18 @@
 				position: absolute;
 				border-radius: 50%;
 				background-color: #fff;
+				-webkit-filter: blur(25px);
 				filter: blur(25px);
 				transition-duration: 2s
 			}
 		</style>
-		<title>Gooey Animation with vanilla JavaScript</title>
+		<title>Gooey Effect with vanilla JavaScript</title>
 	</head>
 
 	<body>
 		<div class="gooey"></div>
 		<script type="text/javascript">
-			const gooey = document.querySelector(".gooey"),
+			const gooey = document.querySelector('.gooey'),
 			setPos = function(i) {
 				// Set the position of an element by using its dataset (top/left)
 				// i = element node
@@ -58,8 +65,8 @@
 			};
 			// Create and append 30 bubbles to the container
 			for (let i = 0; i < 30; i++) {
-				let bubble = document.createElement("div");
-				bubble.className = "bubble";
+				let bubble = document.createElement('div');
+				bubble.className = 'bubble';
 				// Element initial position
 				bubble.dataset.left = Math.floor(window.innerWidth * Math.random());
 				bubble.dataset.top = Math.floor(window.innerHeight * Math.random());
