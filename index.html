@@ -21,78 +21,13 @@
 		<meta property="og:site_name" content="matteoo34's GitHub">
 		<meta property="og:title" content="Gooey Effect with vanilla JavaScript">
 		<meta property="og:description" content="A simple gooey animation made with CSS and vanilla JS.">
-		<style>
-			body {
-				margin: 0;
-				overflow: hidden
-			}
-
-			.gooey {
-				height: 100vh;
-				background-color: #000;
-				-webkit-filter: contrast(100);
-				filter: contrast(100)
-			}
-
-			.bubble {
-				position: absolute;
-				border-radius: 50%;
-				background-color: #fff;
-				-webkit-filter: blur(25px);
-				filter: blur(25px);
-				transition-duration: 2s
-			}
-		</style>
+		<link rel="stylesheet" type="text/css" href="main.css">
 		<title>Gooey Effect with vanilla JavaScript</title>
 	</head>
 
 	<body>
 		<div class="gooey"></div>
-		<script type="text/javascript">
-			const gooey = document.querySelector('.gooey'),
-			setPos = function(i) {
-				// Set the position of an element by using its dataset (top/left)
-				// i = element node
-				i.style.left = `${i.dataset.left}px`;
-				i.style.top = `${i.dataset.top}px`
-			},
-			setSize = function(i) {
-				// Set the size of an element by using a random size variable
-				// i = element node
-				let size = Math.floor(100 * Math.random() + 50);
-				i.style.width = `${size}px`;
-				i.style.height = `${size}px`
-			};
-			// Create and append 30 bubbles to the container
-			for (let i = 0; i < 30; i++) {
-				let bubble = document.createElement('div');
-				bubble.className = 'bubble';
-				// Element initial position
-				bubble.dataset.left = Math.floor(window.innerWidth * Math.random());
-				bubble.dataset.top = Math.floor(window.innerHeight * Math.random());
-				// Set the initial size and position
-				setSize(bubble);
-				setPos(bubble);
-				gooey.appendChild(bubble) // Append the element to the container
-			};
-			const bubbles = gooey.childNodes;
-			// Render function
-			setInterval(function() {
-				// Animate each bubble
-				for (let i of bubbles) {
-					// New position
-					let pos = {
-						x: Number(i.dataset.left) + Math.floor(Math.random() * 50 - 25),
-						y: Number(i.dataset.top) + Math.floor(Math.random() * 50 - 25)
-					};
-					i.dataset.left = pos.x;
-					i.dataset.top = pos.y;
-					// Set the new size and position
-					setSize(i);
-					setPos(i)
-				}
-			}, 100)
-		</script>
+		<script type="text/javascript" src="main.js"></script>
 	</body>
 
 </html>
