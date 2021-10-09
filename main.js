@@ -12,7 +12,7 @@ setSize = function(i) {
 	i.style.width = `${size}px`;
 	i.style.height = `${size}px`
 };
-// Create and append 30 bubbles to the container
+// Create bubbles
 for (let i = 0; i < 30; i++) {
 	let bubble = document.createElement('div');
 	bubble.className = 'bubble';
