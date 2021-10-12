@@ -1,4 +1,4 @@
-const gooey = document.querySelector('.gooey'),
+const gooey = document.querySelector(".gooey"),
 setPos = function(i) {
 	// Set the position of an element by using its dataset (top/left)
 	// i = element node
@@ -14,8 +14,8 @@ setSize = function(i) {
 };
 // Create bubbles
 for (let i = 0; i < 30; i++) {
-	let bubble = document.createElement('div');
-	bubble.className = 'bubble';
+	let bubble = document.createElement("div");
+	bubble.className = "bubble";
 	// Element initial position
 	bubble.dataset.left = Math.floor(window.innerWidth * Math.random());
 	bubble.dataset.top = Math.floor(window.innerHeight * Math.random());

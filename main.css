@@ -1,10 +1,15 @@
 body {
+	height: 100vh;
 	margin: 0;
 	overflow: hidden
 }
 
 .gooey {
-	height: 100vh;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	position: absolute;
 	background-color: #000;
 	-webkit-filter: contrast(100);
 	filter: contrast(100)
