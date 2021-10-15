@@ -12,6 +12,7 @@ setSize = function(i) {
 	i.style.width = `${size}px`;
 	i.style.height = `${size}px`
 };
+
 // Create bubbles
 for (let i = 0; i < 30; i++) {
 	let bubble = document.createElement("div");
@@ -24,8 +25,8 @@ for (let i = 0; i < 30; i++) {
 	setPos(bubble);
 	gooey.appendChild(bubble) // Append the element to the container
 };
-const bubbles = gooey.childNodes;
-// Render function
+
+const bubbles = gooey.childNodes; // Get the bubble number
 setInterval(function() {
 	// Animate each bubble
 	for (let i of bubbles) {
